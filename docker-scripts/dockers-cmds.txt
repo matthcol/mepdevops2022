@@ -1,0 +1,32 @@
+docker ps
+docker ps -a
+docker image ls
+docker pull <image>:<tag>
+docker run <a lot of arguments>
+docker stop/start/rm/logs <container name>
+docker volume create/rm <volume name>
+docker volume ls
+
+docker exec -it <container name> sh
+docker exec -it <container name> bash
+docker exec  <container name> sh -c <linux cmd>
+docker exec  <container name> bash -c <linux cmd>
+docker exec -it <mysql/mariadb container> mysql <mysql args>
+
+# mysql/mariadb client within a container :
+docker exec -it mariadb-movie mysql -u root -p
+	- show databases;
+	- show tables;
+	- select user, host from mysql.user;
+docker exec -it mariadb-movie mysql -u movie -p dbmovie
+docker exec -it mariadb-movie mysql -u movie -p dbmovie -e "select * from movies"
+
+# postgresql client within a container :
+docker exec -it postgresql-movie psql -U movie -d dbmovie
+	- \dt : liste des tables
+	- \l : liste des bases
+	- \du : liste des users
+docker exec -it postgresql-movie psql -U movie -d dbmovie -c "select * from movies"
+PS: import files with postgresql dans /var/lib/postgresql/data/ (ou $PGDATA): 
+	postgresql.conf : database parameters + listener
+	pgh_hba.conf : network, database, user filters + authentication
