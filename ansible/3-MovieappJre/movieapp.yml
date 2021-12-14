@@ -1,0 +1,20 @@
+---
+- name: JRE OpenJDK 11
+
+  # TODO
+
+- name: Deploy movie api
+  hosts: api
+  tasks:
+    - name: Create directory app
+      file:
+        path: /applications
+        state: directory
+        owner: matt
+        group: matt
+        mode: 0700
+      become: yes
+    - name: Copy artifact
+      copy:
+        src: ~/movieapi.jar
+        dest: /applications
