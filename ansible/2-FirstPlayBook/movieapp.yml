@@ -1,0 +1,8 @@
+---
+- name: Deploy movie api
+  hosts: api
+  tasks:
+    - name: Copy artifact
+      copy:
+        src: ~/movieapi.jar
+        dest: .
