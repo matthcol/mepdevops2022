@@ -1,0 +1,8 @@
+---
+- name: Remove Movie Api
+  hosts: api
+  tasks:
+    - name: Remove jar
+      file:
+        path: movieapi.jar
+        state: absent 
