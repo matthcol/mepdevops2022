@@ -1,2 +1,6 @@
 /artifacts/application.properties
 *.jar
+target/
+.settings/
+.classpath
+.project
