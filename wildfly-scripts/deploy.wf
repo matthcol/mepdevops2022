@@ -1,0 +1,2 @@
+deploy ../java_workspace/bonjour2/target/bonjour2.war
+ls deployment

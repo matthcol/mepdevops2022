@@ -5,3 +5,6 @@ jboss-cli --connect "ls deployment"
 
 jboss-cli --connect --commands="deploy target/bonjour2.war,ls deployment"
 jboss-cli --connect --commands="undeploy bonjour2.war,ls deployment"
+
+jboss-cli --connect --file=deploy.wf
+jboss-cli --connect --file=undeploy.wf
