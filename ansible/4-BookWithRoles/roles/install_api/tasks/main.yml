@@ -7,10 +7,10 @@
 
 - name: Create Directory
   file:
-    path: /applications
+    path: "{{ appli_dir }}"
     state: directory
-    owner: matt
-    group: matt
+    owner: "{{ owner_user }}"
+    group: "{{ owner_group }}"
     mode: 0700
   become: yes
 
