@@ -1,0 +1,7 @@
+jboss-cli --connect "deploy target/bonjour2.war"
+jboss-cli --connect --command="deploy target/bonjour2.war"
+jboss-cli --connect "undeploy bonjour2.war"
+jboss-cli --connect "ls deployment"
+
+jboss-cli --connect --commands="deploy target/bonjour2.war,ls deployment"
+jboss-cli --connect --commands="undeploy bonjour2.war,ls deployment"
