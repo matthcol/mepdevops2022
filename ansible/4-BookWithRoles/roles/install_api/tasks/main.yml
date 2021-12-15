@@ -1,0 +1,20 @@
+---
+- name: JRE Open JDK
+  apt:
+    name: openjdk-11-jre
+    state: present
+  become: yes
+
+- name: Create Directory
+  file:
+    path: /applications
+    state: directory
+    owner: matt
+    group: matt
+    mode: 0700
+  become: yes
+
+- name: Copy artifact
+  copy:
+    src: ~/movieapi.jar
+    dest: /applications

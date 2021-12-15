@@ -1,0 +1,8 @@
+---
+- hosts: api
+  roles:
+    - install_api
+
+#- hosts: db
+#  roles:
+#    - install_db
