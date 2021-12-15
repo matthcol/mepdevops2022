@@ -16,5 +16,10 @@
 
 - name: Copy artifact
   copy:
-    src: ~/movieapi.jar
-    dest: /applications
+    src: movieapi.jar
+    dest: "{{ appli_dir }}"
+
+- name: Copy conf api
+  template:
+    src: application.properties.j2
+    dest: "{{ appli_dir }}/application.properties"

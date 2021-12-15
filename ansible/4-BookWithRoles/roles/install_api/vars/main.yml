@@ -1,3 +1,9 @@
 ---
 owner_user: matt
 owner_group: matt
+db_editor: postgresql
+db_host: 192.168.56.112
+db_port: 5432
+db_name: moviedb
+db_user: movie
+db_password: super_password
