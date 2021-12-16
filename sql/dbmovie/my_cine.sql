@@ -6,7 +6,7 @@
 --		mysql -u root dbmovie 		(without password admin os)
 
 -- (drop and) create tables :
-source ddl/my_cine_ddl.sql
+source ddl/my_dbmovie_ddl.sql
 
 -- insert init data
 set autocommit = 1;

@@ -12,7 +12,7 @@ create schema movie authorization movie;
 set role movie;
 
 -- DDL : tables, views
-\i ddl/pg_cine_ddl.sql
+\i ddl/pg_dbmovie_ddl.sql
 -- DATA: psql is in no transaction mode by default
 \i dml/data_stars.sql;
 \i dml/data_movies.sql;
