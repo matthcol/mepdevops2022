@@ -1,9 +1,3 @@
-drop table if exists in_franchise;
-drop table if exists franchise;
-drop table if exists play;
-drop table if exists movies;
-drop table if exists stars;
-
 create table stars (
 	id serial constraint pk_stars primary key,
 	name varchar(150) not null,
