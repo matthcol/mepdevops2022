@@ -9,9 +9,11 @@ repositories {
 
 
 dependencies {
-	
-	compileOnly group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.3'
-	compileOnly group: 'org.postgresql', name: 'postgresql', version: '42.2.20'
+	compileOnly group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.4'
+	compileOnly group: 'org.postgresql', name: 'postgresql', version: '42.3.1'
+	compileOnly group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
+	compileOnly group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '9.4.1.jre11'
+	compileOnly group: 'com.oracle.database.jdbc', name: 'ojdbc11', version: '21.3.0.0'
 }
 
 task copydep(type: Copy) {
